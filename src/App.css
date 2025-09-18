@@ -1,0 +1,265 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667ee6, #764ba2);
+  min-height: 100vh;
+  color: #333;
+}
+
+.app{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.app-header{
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.app-header h1{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #212845, #d6628d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+  
+.stats{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat{
+  background: #f7f9fa;
+  color: #495057;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.stat.completed{
+  background: #d4edda;
+  color: #155724;
+}
+
+.stat.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.app-main{
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.task-form{
+  margin-bottom: 30px;
+}
+
+.input-group{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-input{
+  flex: 1;
+  min-width: 250px;
+  padding: 15px 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3 ease;
+}
+  
+.task-input:focus{
+  border: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-btn{
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  white-space: nowrap;
+}
+
+.add-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap:15px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.54);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.task-item.stat.completed {
+  opacity: 0.7;
+  border-color: #667eea;
+}
+
+.task-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task-text {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-date {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #6c757d;
+}
+
+.edit-input{
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #6c757d;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  outline: none;
+  background: #f8f9ff;
+
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: #e4f2fd;
+}
+
+.edit-btn:hover:not(:disabled) {
+  background: #bbdefb;
+  transform: scale(1.1);
+}
+  
+
+.edit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  background: #ffebee;
+}
+
+.delete-btn:hover {
+  background: #ffcdd2;
+  transform: scale(1.1);
+}
+
+.save-btn {
+  background: #e8f5e9;
+  font-weight: bold;
+}
+
+.save-btn:hover {
+  background: #c8e6c9;
+  transform: scale(1.1);
+}
+
+.cancel-btn {
+  background: #fff3e0;
+  font-weight: bold;
+}
+
+.cancel-btn:hover {
+  background: #ffe0b2;
+  transform: scale(1.1);
+}
+
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+
+  
+  
